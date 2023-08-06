@@ -87,8 +87,7 @@ const Planet: React.FC<PlanetProps> = ({
         const curve = new EllipseCurve(0, 0, distance, distance);
         const point = curve.getPoint(elapsedTime * speed);
         planetRef.current.position.set(point.x, 0, point.y);
-  
-        // Update the text position
+
         textGroupRef.current.position.set(point.x, radius + textSize + 0.1, point.y);
       }
     });
